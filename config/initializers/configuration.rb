@@ -1,5 +1,6 @@
 FULLCALENDAR_FILE_PATH = Rails.root.join('config', 'fullcalendar.yml')
 config = File.exists?(FULLCALENDAR_FILE_PATH) ? YAML.load_file(FULLCALENDAR_FILE_PATH) || {} : {}
+puts config
 FullcalendarEngine::Configuration = {
   'editable'    => true,
   'header'      => {
@@ -15,4 +16,4 @@ FullcalendarEngine::Configuration = {
   'timeFormat'  => "h:mm t{ - h:mm t}"
 }
 FullcalendarEngine::Configuration.merge!(config)
-# FullcalendarEngine::Configuration['events'] = "#{FullcalendarEngine::Configuration['mount_path']}/events/get_events"
+FullcalendarEngine::Configuration['events'] = "#{FullcalendarEngine::Configuration['mount_path']}/events/get_events"

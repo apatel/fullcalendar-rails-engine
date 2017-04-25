@@ -5351,7 +5351,7 @@ function DayEventRenderer() {
 				skinCss +
 				"'" +
 			">" +
-			"<div class='fc-event-inner fc-event-" + event.class_type_id + "'>" +
+			"<div class='fc-event-inner fc-event-" + event.class_type_id + "'>"
 		if (!event.allDay && segment.isStart) {
 			html +=
 				"<span class='fc-event-time'>" +

@@ -121,8 +121,8 @@ var fcViews = fc.views = {};
 
 $.fn.fullCalendar = function(options) {
   console.log("OPTIONS")
-	options.events = "/fullcalendar/events/get_events"
   console.log(options)
+	console.log(options.events)
 
 	// method calling
 	if (typeof options == 'string') {

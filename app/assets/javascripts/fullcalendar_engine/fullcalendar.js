@@ -121,7 +121,7 @@ var fcViews = fc.views = {};
 
 $.fn.fullCalendar = function(options) {
 	//fix this to call the mount path
-	options.events = options.mount_path = "/events/get_events"
+	options.events = options.mount_path + "/events/get_events"
 	console.log(options.events)
 	// method calling
 	if (typeof options == 'string') {

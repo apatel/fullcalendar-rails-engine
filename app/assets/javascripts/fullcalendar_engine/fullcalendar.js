@@ -120,9 +120,9 @@ var fcViews = fc.views = {};
 
 
 $.fn.fullCalendar = function(options) {
-	//fix this to call the mount path
+	//reset the events path for same page link click
 	options.events = options.mount_path + "/events/get_events"
-	console.log(options.events)
+
 	// method calling
 	if (typeof options == 'string') {
 		var args = Array.prototype.slice.call(arguments, 1);
@@ -151,7 +151,6 @@ $.fn.fullCalendar = function(options) {
 	var eventSources = options.eventSources || [];
 	delete options.eventSources;
 	if (options.events) {
-		console.log("yes to events!")
 		eventSources.push(options.events);
 		delete options.events;
 	}

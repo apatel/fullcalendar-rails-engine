@@ -152,6 +152,7 @@ $.fn.fullCalendar = function(options) {
 	var eventSources = options.eventSources || [];
 	delete options.eventSources;
 	if (options.events) {
+		console.log("yes to events!")
 		eventSources.push(options.events);
 		delete options.events;
 	}

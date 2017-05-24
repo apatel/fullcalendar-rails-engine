@@ -3991,10 +3991,13 @@ function AgendaEventRenderer() {
 			">" +
 			"<div class='fc-event-inner fc-event-" + event.class_type_id + "'>" +
 			"<div class='fc-event-time'>" +
-			htmlEscape(formatDates(event.start, event.end, opt('timeFormat'))) +
+			htmlEscape(formatDate(event.start, opt('timeFormat'))) +
 			"</div>" +
 			"<div class='fc-event-title'>" +
-			htmlEscape(event.title || '') + " " + htmlEscape(event.instructor || '') +
+			htmlEscape(event.title || '') +
+			"</div>" +
+			"<div class='fc-event-instructor'>" +
+			htmlEscape(event.instructor || '') +
 			"</div>" +
 			"</div>" +
 			"<div class='fc-event-bg'></div>";
@@ -5356,13 +5359,16 @@ function DayEventRenderer() {
 			html +=
 				"<span class='fc-event-time'>" +
 				htmlEscape(
-					formatDates(event.start, event.end, opt('timeFormat'))
+					formatDate(event.start, opt('timeFormat'))
 				) +
 				"</span>";
 		}
 		html +=
 			"<span class='fc-event-title'>" +
-			htmlEscape(event.title || '') + " " + htmlEscape(event.instructor || '') +
+			htmlEscape(event.title || '') +
+			"</span>" +
+			"<span class='fc-event-instructor'>" +
+			htmlEscape(event.instructor || '') +
 			"</span>" +
 			"</div>";
 		if (segment.isEnd && isEventResizable(event)) {

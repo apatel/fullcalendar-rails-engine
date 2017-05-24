@@ -3991,7 +3991,7 @@ function AgendaEventRenderer() {
 			">" +
 			"<div class='fc-event-inner fc-event-" + event.class_type_id + "'>" +
 			"<div class='fc-event-time'>" +
-			htmlEscape(formatDates(event.start, event.end, opt('timeFormat'))) +
+			htmlEscape(formatDates(event.start, opt('timeFormat'))) +
 			"</div>" +
 			"<div class='fc-event-title'>" +
 			htmlEscape(event.title || '') +
@@ -5356,7 +5356,7 @@ function DayEventRenderer() {
 			html +=
 				"<span class='fc-event-time'>" +
 				htmlEscape(
-					formatDates(event.start, event.end, opt('timeFormat'))
+					formatDates(event.start, opt('timeFormat'))
 				) +
 				"</span>";
 		}

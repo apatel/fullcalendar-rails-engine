@@ -6,7 +6,7 @@ FullcalendarEngine::Configuration = {
   'header'      => {
     left: 'prev,next today',
     center: 'title',
-    right: 'month,agendaWeek,agendaDay'
+    right: 'agendaWeek,month,agendaDay'
   },
   'defaultView' => 'agendaWeek',
   'height'      => 500,
